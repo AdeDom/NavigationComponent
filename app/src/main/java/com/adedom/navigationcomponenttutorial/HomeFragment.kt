@@ -12,8 +12,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         button_login.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
         }
     }
 }

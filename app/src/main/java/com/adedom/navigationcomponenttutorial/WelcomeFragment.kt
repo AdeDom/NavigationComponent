@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.fragment_welcome.*
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
-    private val args: WelcomeFragmentArgs by navArgs()
+    private val args by navArgs<WelcomeFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -18,8 +18,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         text_view_password.text = args.password
 
         button_ok.setOnClickListener {
-            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
-            findNavController().navigate(action)
+            findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
         }
     }
 }
