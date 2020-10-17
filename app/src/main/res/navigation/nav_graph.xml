@@ -17,6 +17,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -78,4 +81,9 @@
         android:name="com.adedom.navigationcomponenttutorial.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.adedom.navigationcomponenttutorial.BottomSheetFragment"
+        android:label="BottomSheetFragment"
+        tools:layout="@layout/bottom_sheet" />
 </navigation>

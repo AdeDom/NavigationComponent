@@ -14,5 +14,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         button_login.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
         }
+
+        btBottomSheet.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_bottomSheetFragment)
+        }
     }
 }
